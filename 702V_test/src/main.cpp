@@ -17,12 +17,12 @@ competition Competition;
 // define your global instances of motors and other devices here
 brain Brain;
 controller Controller1;
-motor leftfront = motor(PORT1, ratio6_1, false);
-motor leftrear = motor(PORT2, ratio6_1, true);
-motor leftrear_stacked = motor(PORT3, ratio6_1, false);
-motor rightfront = motor(PORT4, ratio6_1, false);
-motor rightrear = motor(PORT5, ratio6_1, false);
-motor rightrear_stacked = motor(PORT6, ratio6_1, false);
+motor leftfront = motor(PORT12, ratio6_1, true);
+motor leftrear = motor(PORT1, ratio6_1, true);
+motor leftrear_stacked = motor(PORT11, ratio6_1, false);
+motor rightfront = motor(PORT19, ratio6_1, false);
+motor rightrear = motor(PORT10, ratio6_1, false);
+motor rightrear_stacked = motor(PORT20, ratio6_1, true);
 inertial InertialSensor = inertial(PORT7);
 motor_group left_drive = motor_group(leftfront, leftrear, leftrear_stacked);
 motor_group right_drive = motor_group(rightfront, rightrear, rightrear_stacked);
@@ -80,7 +80,7 @@ void usercontrol(void) {
     // update your motors, etc.
     // ........................................................................
 
-    left_drive.spin(reverse, Controller1.Axis3.position(percent), percent);
+    left_drive.spin(forward, Controller1.Axis3.position(percent), percent);
     right_drive.spin(forward, Controller1.Axis2.position(percent), percent);
     wait(20, msec); // Sleep the task for a short amount of time to
                     // prevent wasted resources.
