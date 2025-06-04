@@ -24,8 +24,8 @@ motor rightfront = motor(PORT4, ratio6_1, false);
 motor rightrear = motor(PORT5, ratio6_1, false);
 motor rightrear_stacked = motor(PORT6, ratio6_1, false);
 inertial InertialSensor = inertial(PORT7);
-motor_group MotorGroup1 = motor_group(leftfront, leftrear, leftrear_stacked);
-motor_group MotorGroup2 = motor_group(rightfront, rightrear, rightrear_stacked);
+motor_group left_drive = motor_group(leftfront, leftrear, leftrear_stacked);
+motor_group right_drive = motor_group(rightfront, rightrear, rightrear_stacked);
 /*---------------------------------------------------------------------------*/
 /*                          Pre-Autonomous Functions                         */
 /*                                                                           */
@@ -80,12 +80,8 @@ void usercontrol(void) {
     // update your motors, etc.
     // ........................................................................
 
-    leftfront.spin(forward, Controller1.Axis3.position(percent), percent);
-    leftrear.spin(forward, Controller1.Axis3.position(percent), percent);
-    leftrear_stacked.spin(forward, Controller1.Axis3.position(percent), percent);
-    rightfront.spin(forward, Controller1.Axis2.position(percent), percent);
-    rightrear.spin(forward, Controller1.Axis2.position(percent), percent);
-    rightrear_stacked.spin(forward, Controller1.Axis2.position(percent), percent);
+    left_drive.spin(forward, Controller1.Axis2.position(percent), percent);
+    right_drive.spin(forward, Controller1.Axis2.position(percent), percent);
     wait(20, msec); // Sleep the task for a short amount of time to
                     // prevent wasted resources.
   }
