@@ -23,6 +23,7 @@ motor leftrear_stacked = motor(PORT3, ratio6_1, false);
 motor rightfront = motor(PORT4, ratio6_1, false);
 motor rightrear = motor(PORT5, ratio6_1, false);
 motor rightrear_stacked = motor(PORT6, ratio6_1, false);
+inertial InertialSensor = inertial(PORT7);
 /*---------------------------------------------------------------------------*/
 /*                          Pre-Autonomous Functions                         */
 /*                                                                           */
