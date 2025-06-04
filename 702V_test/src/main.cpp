@@ -78,6 +78,12 @@ void usercontrol(void) {
     // update your motors, etc.
     // ........................................................................
 
+    leftfront.spin(forward, Controller1.Axis3.position(percent), percent);
+    leftrear.spin(forward, Controller1.Axis3.position(percent), percent);
+    leftrear_stacked.spin(forward, Controller1.Axis3.position(percent), percent);
+    rightfront.spin(forward, Controller1.Axis2.position(percent), percent);
+    rightrear.spin(forward, Controller1.Axis2.position(percent), percent);
+    rightrear_stacked.spin(forward, Controller1.Axis2.position(percent), percent);
     wait(20, msec); // Sleep the task for a short amount of time to
                     // prevent wasted resources.
   }
