@@ -38,6 +38,7 @@ motor_group right_drive = motor_group(rightfront, rightrear, rightrear_stacked);
 
 void pre_auton(void) {
 
+
   // All activities that occur before the competition starts
   // Example: clearing encoders, setting servo positions, ...
 }
@@ -47,15 +48,13 @@ void pre_auton(void) {
 /*                              Autonomous Task                              */
 /*                                                                           */
 /*  This task is used to control your robot during the autonomous phase of   */
-/*  a VEX Competition.                                                       */
+/*  a VEX Competition.                                                     */
 /*                                                                           */
 /*  You must modify the code to add your own robot specific commands here.   */
 /*---------------------------------------------------------------------------*/
 
 void autonomous(void) {
-  // ..........................................................................
-  // Insert autonomous user code here.
-  // ..........................................................................
+
 }
 
 /*---------------------------------------------------------------------------*/
