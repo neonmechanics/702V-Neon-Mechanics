@@ -14,5 +14,4 @@ inertial InertialSensor = inertial(PORT7);
 motor_group left_drive = motor_group(leftfront, leftrear, leftrear_stacked);
 motor_group right_drive = motor_group(rightfront, rightrear, rightrear_stacked);
 void vexcodeInit( void ) {
-  // nothing to initialize
 }
