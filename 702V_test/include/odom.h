@@ -1,4 +1,4 @@
 #include "types.h"
-Pose getposition(void);
+Pose prev(void);
 float prevpos;
 float prevangle;
